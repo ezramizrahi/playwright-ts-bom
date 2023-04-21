@@ -12,12 +12,12 @@ const selectors: SelectorsList = {
   day: '.day'
 };
 
-// test.beforeEach(async ({ page }) => {
-//   await page.goto('/', { waitUntil: 'load' });
-// });
+test.beforeEach(async ({ page }) => {
+  await page.goto('http://bom.gov.au/');
+});
 
 test('three days from now it will not be rainy', async ({ page }) => {
-  await page.goto('/', { waitUntil: 'load' });
+  // await page.goto('/', { waitUntil: 'load' });
   await page.getByTestId('Sydney forecast').click();
   await page.waitForLoadState('load');
   const day:Locator = page.locator(selectors.day);
