@@ -13,7 +13,7 @@ const selectors: SelectorsList = {
 };
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://bom.gov.au/');
+  await page.goto('/');
 });
 
 test('three days from now it will not be rainy', async ({ page }) => {
