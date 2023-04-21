@@ -34,7 +34,7 @@ To get a local copy up and running follow these steps:
 3. run `npx playwright test chanceOfRain.spec.ts`
 
 ## Issues
-The tests seem to fail in GitHub Actions for a reason that isn't clear. Locally they run fine.
+The tests seem to fail in GitHub Actions for a reason that isn't clear (maybe anti-scraping/anti-bot measures?). Locally the tests run fine.
 
 ## Contact
 
