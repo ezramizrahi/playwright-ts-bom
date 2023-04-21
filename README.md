@@ -19,6 +19,8 @@ The data on `http://www.bom.gov.au/nsw/forecasts/sydney.shtml` appears to be a 7
 ## Methodology
 We use a `beforeEach` hook to visit the url that is read from the `playwright.config.ts` file. I grab the `textContent` from all `.day` elements, and given our assumption above, we will consider the third element in this array to be our target percentage value. It isn't ideal to use classnames, but this seems to be the easiest method of getting the desired text given the lack of other unique selectors. I get the percentage value through a regex match. I use Day.js to format the date for our error message. Generally I try to avoid using external libraries, but in this case Day.js helps reduce complexity; the boundary cases of calculating three days from today's date when at the end of a month, or at the end of the year, could be complex to implement - it's simpler and (probably) safer to use an external library built for this purpose.
 
+I have not used the page object model architecture, as the above test is too small/short to justify scaffolding out a POM framework.
+
 ## Built With:
 
 * Playwright
