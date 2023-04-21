@@ -40,5 +40,5 @@ async function getFormattedTargetDate() {
   const today = dayjs();
   const month = today.add(3, 'day').format('MMMM'); // => get full name of month e.g. April
   const threeDaysFromToday = today.add(3, 'day').format('Do'); // => get ordinal date e.g. 24th
-  return threeDaysFromToday + ' ' + month; // => returns e.g. 'April 24th'
+  return threeDaysFromToday + ' ' + month; // => returns a string e.g. 'April 24th'
 };
