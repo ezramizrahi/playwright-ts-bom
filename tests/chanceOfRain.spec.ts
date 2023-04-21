@@ -17,7 +17,6 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('three days from now it will not be rainy', async ({ page }) => {
-  // await page.goto('/', { waitUntil: 'load' });
   await page.getByTestId('Sydney forecast').click();
   await page.waitForLoadState('load');
   const day:Locator = page.locator(selectors.day);

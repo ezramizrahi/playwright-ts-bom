@@ -5,6 +5,7 @@
 * [Methodology](#methodology)
 * [Built With](#built-with)
 * [Getting Started](#getting-started)
+* [Issues](#issues)
 * [Contact](#contact)
 
 
@@ -31,6 +32,9 @@ To get a local copy up and running follow these steps:
 1. clone the repo
 2. run `npm install`
 3. run `npx playwright test chanceOfRain.spec.ts`
+
+## Issues
+The tests seem to fail in GitHub Actions for a reason that isn't clear. Locally they run fine.
 
 ## Contact
 
