@@ -4,11 +4,7 @@ import advancedFormat from "dayjs/plugin/advancedFormat";
 dayjs.extend(advancedFormat)
 
 const precipPercentageThreshold: number = 50;
-
-type SelectorName = string;
-type Selector = string;
-type SelectorsList = Record<SelectorName, Selector>;
-const selectors: SelectorsList = {
+const selectors: any = {
   day: '.day'
 };
 
@@ -37,8 +33,8 @@ async function getPrecipPercentageNumValue(percentageText: string|null) {
 };
 
 async function getFormattedTargetDate() {
-  const today = dayjs();
-  const month = today.add(3, 'day').format('MMMM'); // => get full name of month e.g. April
-  const threeDaysFromToday = today.add(3, 'day').format('Do'); // => get ordinal date e.g. 24th
-  return threeDaysFromToday + ' ' + month; // => returns a string e.g. 'April 24th'
+  const todayPlusThree = dayjs().add(3, 'day');
+  const targetDay: string = todayPlusThree.format('Do'); // => get ordinal date e.g. 24th
+  const targetMonth: string = todayPlusThree.format('MMMM'); // => get full name of month e.g. April
+  return targetDay + ' ' + targetMonth; // => returns a string e.g. 'April 24th'
 };
