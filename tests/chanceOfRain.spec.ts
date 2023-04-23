@@ -4,6 +4,7 @@ import advancedFormat from "dayjs/plugin/advancedFormat";
 dayjs.extend(advancedFormat)
 
 const precipPercentageThreshold: number = 50;
+// any turns off type checking for selectors, but that's ok because that won't really impact anything
 const selectors: any = {
   day: '.day'
 };
